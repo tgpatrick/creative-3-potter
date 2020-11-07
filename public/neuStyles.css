@@ -1,0 +1,24 @@
+.neuSmall {
+  border-radius: 10px;
+  color: #515151;
+  background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
+  box-shadow: 7px 7px 14px #afafaf,
+    -7px -7px 14px #fdfdfd;
+}
+
+.neuSmallDown {
+  border-radius: 10px;
+  color: #515151;
+  background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
+  box-shadow: inset 7px 7px 14px #afafaf,
+    inset -7px -7px 14px #fdfdfd;
+}
+
+.neuBig {
+  margin: 25px;
+  padding: 15px;
+  border-radius: 45px;
+  background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
+  box-shadow: 30px 30px 59px #adadad,
+    -30px -30px 59px #ffffff;
+}
