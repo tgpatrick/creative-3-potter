@@ -14,11 +14,6 @@ export default {
     return {
     }
   },
-  computed: {
-    characters() {
-      return this.$root.$data.characters;
-    }
-  },
 }
 </script>
 

@@ -155,6 +155,12 @@
     padding: 0;
   }
 
+  #buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   but {
     margin: 15px;
     height: 50px;
