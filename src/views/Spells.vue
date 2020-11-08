@@ -66,7 +66,6 @@
         this.spell = spell;
         this.showDetail = !this.showDetail;
         this.$forceUpdate();
-        console.log(spell);
       },
       convert(data) {
         if (data == false) {
@@ -84,14 +83,7 @@
   }
 </script>
 
-<style scoped>
-  .container {
-    max-width: 450px;
-    max-height: 500px;
-    margin-top: 50px;
-    overflow: scroll;
-  }
-
+<style>
   .spells {
     border-radius: 10px;
   }
@@ -123,28 +115,9 @@
     width: 75px;
   }
 
-  .doneButtonContainer {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .doneButton {
-    height: 25px;
-    margin-top: 15px;
-    margin-right: 15px;
-  }
-
   .spellData {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "key data";
-  }
-
-  .key {
-    grid-area: key;
-  }
-
-  .data {
-    grid-area: data;
   }
 </style>

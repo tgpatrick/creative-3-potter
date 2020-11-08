@@ -2,7 +2,7 @@
   <div class="container neuBig">
     <template v-if="!showDetail">
       <div class="characters">
-        <h2>Select a name for detail</h2>
+        <h2>Click a character for details</h2>
         <div class="characterContainer" v-for="character in characters" :key="character._id">
           <div class="character">
             <h3 class="name" v-on:click="toggleDetail(character)">{{character.name}}</h3>
@@ -85,7 +85,6 @@
         this.character = character;
         this.showDetail = !this.showDetail;
         this.$forceUpdate();
-        console.log(character);
       },
       convert(data) {
         if (data == false) {
@@ -103,7 +102,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .container {
     max-width: 450px;
     max-height: 500px;
