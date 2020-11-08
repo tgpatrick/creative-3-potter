@@ -9,7 +9,7 @@
         <p>Your house theme: </p>
         <p id="yourHouse">{{this.$root.$data.house}}</p>
         <button v-on:click=getHouse id="sortinghat" class="neuSmall">
-          <img id="sortimg" src="/hat.png" alt="Find your house">
+          <img id="sortimg" src="/images/hat.png" alt="Find your house">
           <p id="sorttext">Sort</p>
         </button>
       </div>
