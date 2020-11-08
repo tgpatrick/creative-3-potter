@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div id="homeText" class="neuBig">
+  <h2>Welcome to Harry Potter Quick Reference!</h2>
+  <p>To get started, visit the Characters and Spells pages.</p>
+  <p>Then, you can add your favorites and view them on the Favorites page.</p>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+    }
+  },
+  computed: {
+    characters() {
+      return this.$root.$data.characters;
+    }
+  },
 }
 </script>
+
+<style>
+  #homeText {
+    margin: 60px;
+  }
+</style>

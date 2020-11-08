@@ -6,9 +6,9 @@
         <p>Quick Reference</p>
       </div>
       <div id="house">
-        <p>Your house: </p>
-        <p id="yourHouse">None</p>
-        <button id="sortinghat" class="neuSmall">
+        <p>Your house theme: </p>
+        <p id="yourHouse">{{this.$root.$data.house}}</p>
+        <button v-on:click=getHouse id="sortinghat" class="neuSmall">
           <img id="sortimg" src="/hat.png" alt="Find your house">
           <p id="sorttext">Sort</p>
         </button>
@@ -35,6 +35,21 @@
     <router-view />
   </div>
 </template>
+
+<script>
+  import axios from 'axios';
+  export default {
+    name: 'app',
+    methods: {
+      getHouse() {
+        axios.get("https://www.potterapi.com/v1/sortingHat")
+          .then(response => {
+            this.$root.$data.house = response.data;
+          })
+      }
+    }
+  }
+</script>
 
 <style>
   @font-face {
@@ -105,8 +120,8 @@
   }
 
   #yourHouse {
-    margin-left: 10px;
-    margin-right: 15px;
+    width: 100px;
+    margin-right: 5px;
   }
 
   #house button {
