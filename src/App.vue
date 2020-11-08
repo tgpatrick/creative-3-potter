@@ -15,18 +15,18 @@
       </div>
       <div id="buttons">
         <div id="main">
-          <router-link to="/">
+          <router-link tag="but" to="/">
             <p>Home</p>
           </router-link>
-          <router-link to="/favorites">
+          <router-link tag="but" to="/favorites">
             <p>Favorites</p>
           </router-link>
         </div>
         <div id="content">
-          <router-link to="/characters">
+          <router-link tag="but" to="/characters">
             <p>Characters</p>
           </router-link>
-          <router-link to="/spells">
+          <router-link tag="but" to="/spells">
             <p>Spells</p>
           </router-link>
         </div>
@@ -134,6 +134,12 @@
     background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
     box-shadow: 7px 7px 14px #afafaf,
       -7px -7px 14px #fdfdfd;
+    transition: .2s;
+  }
+
+  #house button:hover {
+    box-shadow: 10px 10px 17px #afafaf,
+      -10px -10px 17px #fdfdfd;
   }
 
   #house img {
@@ -149,13 +155,28 @@
     padding: 0;
   }
 
-  #buttons a {
+  but {
     margin: 15px;
     height: 50px;
     width: 80px;
+    text-align: center;
 
     border-radius: 10px;
     color: #515151;
+    background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
+    box-shadow: 7px 7px 14px #afafaf,
+      -7px -7px 14px #fdfdfd;
+    transition: .5s;
+  }
+
+  but:hover {
+    margin: 14px;
+    height: 52px;
+    width: 82px;
+  }
+
+  nav but.router-link-active,
+  nav but.router-link-exact-active {
     background: linear-gradient(145deg, #e5e5e5, #c1c1c1);
     box-shadow: 7px 7px 14px #afafaf,
       -7px -7px 14px #fdfdfd;
